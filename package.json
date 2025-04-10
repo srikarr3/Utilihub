@@ -1,18 +1,25 @@
 {
   "name": "utilihub",
   "version": "1.0.0",
-  "description": "Your All-in-One Digital Swiss Army Knife. Access real-time weather updates, currency conversions, global news, and smart tools.",
+  "description": "All-in-One Digital Swiss Army Knife",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "next start",
+    "dev": "next dev",
+    "build": "next build",
+    "push": "bash ./scripts/git-push.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/utilihub.git"
   },
   "keywords": [
     "utilities",
+    "tools",
     "weather",
     "currency",
     "news",
-    "tools",
     "api"
   ],
   "author": "",
