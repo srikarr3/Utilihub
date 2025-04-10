@@ -6,7 +6,7 @@
   "scripts": {
     "start": "next start",
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "push": "bash ./scripts/git-push.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
