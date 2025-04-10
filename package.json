@@ -28,7 +28,10 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "next": "^13.4.12",
     "node-fetch": "^2.6.9",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "utilihub": "file:",
     "zod": "^3.21.4"
   },
