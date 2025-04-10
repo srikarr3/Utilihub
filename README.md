@@ -27,7 +27,7 @@ cd Utilihub
 npm install
 ```
 
-3. Create a `.env` file in the `server` directory with the following variables:
+3. Create a `.env` file with the following variables:
 ```
 GEMINI_API_KEY=your_gemini_api_key
 EXCHANGERATE_API_KEY=your_exchangerate_api_key
