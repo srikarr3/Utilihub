@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Access real-time weather updates, currency conversions, global news, and smart tools—all in one elegant interface.">
+    <meta name="theme-color" content="#6366f1">
+    <title>UtiliHub - Your Digital Swiss Army Knife</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Chart.js for visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Canvas-Confetti for celebration effects -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <!-- Math.js for advanced math operations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
+    <!-- Plotly.js for graphing -->
+    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+    <!-- html2pdf for exporting results -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>UtiliHub</h1>
+        <p class="tagline">Your All-in-One Digital Swiss Army Knife</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Gemini-Powered MCP Server</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            AI Tools
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="pages/ask.html">Ask Gemini</a></li>
+                            <li><a class="dropdown-item" href="pages/creative.html">Creative Content</a></li>
+                            <li><a class="dropdown-item" href="pages/analyze.html">Text Analysis</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="utilityDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Utility Tools
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="utilityDropdown">
+                            <li><a class="dropdown-item" href="pages/dictionary.html">Dictionary</a></li>
+                            <li><a class="dropdown-item" href="pages/url.html">URL Shortener</a></li>
+                            <li><a class="dropdown-item" href="pages/notes.html">Notes</a></li>
+                            <li><a class="dropdown-item" href="pages/stats.html">Statistics</a></li>
+                            <li><a class="dropdown-item" href="pages/currency.html">Currency</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-3 py-md-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="welcome-card p-3 p-md-4">
+                    <h4 class="alert-heading fs-5 fs-md-4"><i class="fas fa-robot me-2"></i> Welcome to Your Gemini-Powered Experience</h4>
+                    <p class="mb-1">This interface connects you to a suite of powerful tools integrated with Google's advanced Gemini AI. Experience state-of-the-art artificial intelligence right in your browser.</p>
+                    <hr>
+                    <p class="mb-0"><i class="fas fa-info-circle me-2"></i> Select any tool below to explore its capabilities. All AI processing happens via the Gemini API with your personal API key.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI-Powered Tools Section -->
+        <h2 class="section-header">
+            <div class="icon-container ai-icon-container">
+                <i class="fas fa-brain"></i>
+            </div>
+            AI-Powered Tools 
+            <span class="gemini-badge">Powered by Gemini</span>
+        </h2>
+        <div class="row">
+            <!-- Ask Gemini Tool Card -->
+            <div class="col-md-6 col-lg-4 mb-4">
+            <a href="pages/ask.html" class="tool-card-home ai-tool text-decoration-none d-block h-100">
+                <div class="card-img">
+                    <i class="fas fa-comment-dots"></i>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Ask Gemini</h3>
+                    <p class="card-text">Consult with Google's advanced Gemini AI on any topic. Get intelligent, detailed answers to your questions.</p>
+                    <span class="btn btn-sm btn-primary">Open Tool <i class="fas fa-arrow-right ms-1"></i></span>
+                </div>
+            </a>
+            </div>
+
+            <!-- Creative Content Tool Card -->
+            <div class="col-md-6 col-lg-4 mb-4">
+            <a href="pages/creative.html" class="tool-card-home ai-tool text-decoration-none d-block h-100">
+                <div class="card-img">
+                    <i class="fas fa-magic"></i>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Creative Content</h3>
+                    <p class="card-text">Generate unique creative content like stories, poems, essays, and more with AI assistance.</p>
+                    <span class="btn btn-sm btn-primary">Open Tool <i class="fas fa-arrow-right ms-1"></i></span>
+                </div>
+            </a>
+            </div>
+
+            <!-- Text Analysis Tool Card -->
+            <div class="col-md-6 col-lg-4 mb-4">
+            <a href="pages/analyze.html" class="tool-card-home ai-tool text-decoration-none d-block h-100">
+                <div class="card-img">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Text Analysis</h3>
+                    <p class="card-text">Analyze text for sentiment, generate summaries, or extract key information.</p>
+                    <span class="btn btn-sm btn-primary">Open Tool <i class="fas fa-arrow-right ms-1"></i></span>
+                </div>
+            </a>
+            </div>
+        </div>
+
+        <!-- Utility Tools Section -->
+        <h2 class="section-header">
+            <div class="icon-container utility-icon-container">
+                <i class="fas fa-tools"></i>
+            </div>
+            Utility Tools
+        </h2>
+        <div class="row">
+            <!-- Dictionary Tool Card -->
+            <div class="col-md-6 col-lg-4 mb-4">
+            <a href="pages/dictionary.html" class="tool-card-home utility-tool text-decoration-none d-block h-100">
+                <div class="card-img">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Dictionary</h3>
+                    <p class="card-text">Look up comprehensive definitions, synonyms, and usage examples for any word.</p>
+                    <span class="btn btn-sm btn-primary">Open Tool <i class="fas fa-arrow-right ms-1"></i></span>
+                </div>
+            </a>
+            </div>
+
+            <!-- URL Shortener Tool Card -->
+            <div class="col-md-6 col-lg-4 mb-4">
+            <a href="pages/url.html" class="tool-card-home utility-tool text-decoration-none d-block h-100">
+                <div class="card-img">
+                    <i class="fas fa-link"></i>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">URL Shortener</h3>
+                    <p class="card-text">Create compact, shareable links from long URLs for easier sharing.</p>
+                    <span class="btn btn-sm btn-primary">Open Tool <i class="fas fa-arrow-right ms-1"></i></span>
+                </div>
+            </a>
+            </div>
+
+            <!-- Notes Tool Card -->
+            <div class="col-md-6 col-lg-4 mb-4">
+            <a href="pages/notes.html" class="tool-card-home utility-tool text-decoration-none d-block h-100">
+                <div class="card-img">
+                    <i class="fas fa-sticky-note"></i>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Notes</h3>
+                    <p class="card-text">Create and save markdown-formatted notes on the server.</p>
+                    <span class="btn btn-sm btn-primary">Open Tool <i class="fas fa-arrow-right ms-1"></i></span>
+                </div>
+            </a>
+            </div>
+
+            <!-- Statistics Tool Card -->
+            <div class="col-md-6 col-lg-4 mb-4">
+            <a href="pages/stats.html" class="tool-card-home utility-tool text-decoration-none d-block h-100">
+                <div class="card-img">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Statistics</h3>
+                    <p class="card-text">Calculate statistical measures for a set of numbers.</p>
+                    <span class="btn btn-sm btn-primary">Open Tool <i class="fas fa-arrow-right ms-1"></i></span>
+                </div>
+            </a>
+            </div>
+
+            <!-- Currency Tool Card -->
+            <div class="col-md-6 col-lg-4 mb-4">
+            <a href="pages/currency.html" class="tool-card-home utility-tool text-decoration-none d-block h-100">
+                <div class="card-img currency">
+                    <i class="fas fa-money-bill-wave"></i>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Currency</h3>
+                    <p class="card-text">Convert between different currencies with real-time rates.</p>
+                    <span class="btn btn-sm btn-primary">Open Tool <i class="fas fa-arrow-right ms-1"></i></span>
+                </div>
+            </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">Gemini<span>MCP</span></div>
+                    <small>Powered by Google's Gemini AI</small>
+                </div>
+                <div class="footer-links">
+                    <a href="https://ai.google.dev/gemini-api/docs" target="_blank">Gemini API Docs</a>
+                    <a href="https://github.com/modelcontextprotocol/mcp" target="_blank">MCP GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Add new tool icons to the styles -->
+    <style>
+        .card-img.currency {
+            background: linear-gradient(135deg, #10b981, #34d399);
+        }
+    </style>
+</body>
+</html> 
