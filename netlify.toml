@@ -1,6 +1,10 @@
 [build]
   command = "npm run build"
-  publish = "out"
+  publish = ".next"
+
+# Next.js specific redirects
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 # Redirect all routes to index.html for SPA behavior
 [[redirects]]

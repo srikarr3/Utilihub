@@ -6,13 +6,15 @@
   "scripts": {
     "start": "next start",
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d .next",
     "push": "bash ./scripts/git-push.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/utilihub.git"
+    "url": "git+https://github.com/srikarr3/Utilihub.git"
   },
   "keywords": [
     "utilities",
@@ -36,6 +38,7 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.10.4",
     "nodemon": "^2.0.22"
   }
 }
